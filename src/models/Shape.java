@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Shape {
     // container of Points (e.g. ArrayList<Point>)
-    private ArrayList<Point> list = new ArrayList<>();
+    private ArrayList<Point> points = new ArrayList<>();
 
     // addPoint(Point) - adds to the container
     public void addPoint(Point p){
@@ -12,25 +12,40 @@ public class Shape {
     }
 
     // calculatePerimeter()
-    public void calculatePerimetr(){
-        double perimetr = 0;
+    public double calculatePerimeter(){
+        if(points.size() < 2)return 0;
 
-        for(int i = 0 ; i < list.size() ; i++){
+        double perimeter = 0;
 
+        for(int i = 0 ; i < points.size() ; i++){
+            Point current = points.get(i);
+            Point next = points.get((i+1) % points.size());
+            perimeter += current.distance(next);
         }
+        return perimeter;
     }
 
     // getAverageSide()
-    public void getAverageSide(double x , double y){
-        return calculatePerimetr()/list.size();
+    public double getAverageSide(){
+        if(points.size() < 2)return 0;
+        return calculatePerimeter()/points.size();
     }
 
     // getLongestSide()
-    public void getLongestSide(double x , double y){
+    public double getLongestSide(){
+        if(points.size() < 2)return 0;
+
         double max = 0;
 
-        for(int i = 0; i< list.size() ; i++){
+        for(int i = 0; i< points.size() ; i++){
+            Point current = points.get(i);
+            Point next = points.get((i+1) % points.size());
+            double dist = current.distance(next);
 
+            if (dist > max){
+                max = dist;
+            }
         }
+        return max;
     }
 }
