@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Shape {
     // container of Points (e.g. ArrayList<Point>)
-    private ArrayList<Point> points = new ArrayList<>();
+    private ArrayList<Point> points = new ArrayList<>();        // ArrayList doesnt have fixed size
 
     // addPoint(Point) - adds to the container
     public void addPoint(Point p){

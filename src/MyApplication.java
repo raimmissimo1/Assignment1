@@ -10,7 +10,7 @@ public class MyApplication {
     public static void main(String[] args) throws FileNotFoundException {
         File file = new File("C:\\Users\\User\\IdeaProjects\\Asignment1\\src\\source");
 
-        Scanner sc = new Scanner(file);         // coordinates in source file didnt work with dots so i set commas!
+        Scanner sc = new Scanner(file);         // coordinates in "source" file didnt work with dots so i set commas!
         Shape shape = new Shape();
 
         while (sc.hasNext()) {
