@@ -23,7 +23,7 @@ public class Point {
     /*public void setX(double x){
         this.x = x;
     }
-                                       didnt use setters
+                                       didnt use setters because there are already coordinates in source
     public void setY(double y){
         this.y = y;
     }*/
