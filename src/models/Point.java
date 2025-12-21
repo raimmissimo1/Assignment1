@@ -34,6 +34,7 @@ public class Point {
         double dy = this.y - dest.getY();
         return  Math.sqrt(dx * dx + dy * dy);
     }
+    // ((x1-x2)^2 + (y1-y2)^2)^0.5 formula between two coor
 
     // toString Override
     @Override

@@ -7,7 +7,7 @@ public class Shape {
     private ArrayList<Point> points = new ArrayList<>();        // ArrayList doesnt have fixed size
 
     // addPoint(Point) - adds to the container
-    public void addPoint(Point p){
+    public void addPoint(Point p) {
         points.add(p);
     }
 

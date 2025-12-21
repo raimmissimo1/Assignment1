@@ -23,6 +23,6 @@ public class MyApplication {
 
         System.out.println("Perimeter of figure: " + shape.calculatePerimeter());
         System.out.println("Longest side of figure: " + shape.getLongestSide());
-        System.out.println("Averaage side of figure" + shape.getAverageSide());
+        System.out.println("Averaage side of figure: " + shape.getAverageSide());
     }
 }
